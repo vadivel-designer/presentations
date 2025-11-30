@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Training - Kissflow</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ============================================ -->
+            <!-- PART 1: OPENING & PROJECT SHOWCASE (8 slides) -->
+            <!-- ============================================ -->
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1 class="title-main">Claude Code</h1>
+                <h2 class="title-sub">Internal Training Session</h2>
+                <div class="title-meta">
+                    <p class="date">December 2025</p>
+                </div>
+                <aside class="notes">
+                    <strong>Welcome everyone!</strong><br><br>
+                    - Introduce yourself briefly<br>
+                    - "Today we're going to learn Claude Code - an AI coding assistant that runs in your terminal"<br>
+                    - "By the end of this session, you'll be using it for your daily development work"<br>
+                    - Duration: ~2 hours with breaks
+                </aside>
+            </section>
+
+            <!-- Slide 2: Agenda -->
+            <section>
+                <h2>Today's Journey</h2>
+                <div class="agenda-grid">
+                    <div class="agenda-item fragment">
+                        <span class="icon">🎯</span>
+                        <span class="agenda-title">Project Showcase</span>
+                        <span class="agenda-desc">See the magic</span>
+                    </div>
+                    <div class="agenda-item fragment">
+                        <span class="icon">📚</span>
+                        <span class="agenda-title">Must Know</span>
+                        <span class="agenda-desc">Essential skills</span>
+                    </div>
+                    <div class="agenda-item fragment">
+                        <span class="icon">🚀</span>
+                        <span class="agenda-title">Intermediate</span>
+                        <span class="agenda-desc">Level up</span>
+                    </div>
+                    <div class="agenda-item fragment">
+                        <span class="icon">⚡</span>
+                        <span class="agenda-title">Advanced</span>
+                        <span class="agenda-desc">What's possible</span>
+                    </div>
+                    <div class="agenda-item fragment">
+                        <span class="icon">❓</span>
+                        <span class="agenda-title">Q&A</span>
+                        <span class="agenda-desc">Your questions</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Here's our roadmap for today.</strong><br><br>
+                    - Click through each item as you explain<br>
+                    - "First, I'll show you 3 demos to get you excited"<br>
+                    - "Then we'll cover the essentials - things you'll use every day"<br>
+                    - "Intermediate section for those who want to go deeper"<br>
+                    - "Quick peek at advanced features"<br>
+                    - "And time for your questions"<br>
+                    - "Let's start with the fun part - demos!"
+                </aside>
+            </section>
+
+            <!-- Slide 4: Demo 1 - Color Spectrum -->
+            <section  class="demo-slide">
+                <div class="demo-badge">LIVE DEMO</div>
+                <h2>Demo 1: Color Spectrum</h2>
+                <p class="demo-subtitle">Building a complete color system from scratch</p>
+                <div class="demo-prompt">
+                    <code>"Generate a comprehensive color palette with semantic naming"</code>
+                </div>
+                <aside class="notes">
+                    <strong>DEMO SCRIPT - Color Spectrum:</strong><br><br>
+                    1. Open the Color Spectrum project: <code>cd color-spectrum && claude</code><br>
+                    2. Show the initial state of the project<br>
+                    3. Demonstrate Claude generating color scales, variants, and accessibility-compliant combinations<br>
+                    4. Show how Claude understands color theory and applies it<br>
+                    5. Walk through the generated palette structure<br>
+                    6. Accept the changes and show the result<br><br>
+                    <strong>KEY POINT:</strong> "Claude understands design systems and can generate production-ready color tokens."<br><br>
+                    <strong>HIGHLIGHT:</strong> Show the automatic contrast ratio calculations for accessibility.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Demo 2 - Admin Project -->
+            <section  class="demo-slide">
+                <div class="demo-badge">LIVE DEMO</div>
+                <h2>Demo 2: Admin Project</h2>
+                <p class="demo-subtitle">Building admin interfaces at speed</p>
+                <div class="demo-prompt">
+                    <code>"Create an admin dashboard with user management and analytics"</code>
+                </div>
+                <aside class="notes">
+                    <strong>DEMO SCRIPT - Admin Project:</strong><br><br>
+                    1. Open the Admin project: <code>cd admin-project && claude</code><br>
+                    2. Show the existing admin structure<br>
+                    3. Ask Claude to add a new feature or enhance existing functionality<br>
+                    4. Demonstrate how Claude understands the admin patterns already in place<br>
+                    5. Show multi-file changes across components, routes, and API calls<br>
+                    6. Walk through how Claude maintains consistency with existing code style<br><br>
+                    <strong>KEY POINT:</strong> "Claude learns your project's patterns and applies them consistently."<br><br>
+                    <strong>HIGHLIGHT:</strong> Show how Claude handles CRUD operations, data tables, forms, and validation - all following your existing conventions.
+                </aside>
+            </section>
+
+            <!-- Slide 6: Demo 3 - Product Ready Designs -->
+            <section  class="demo-slide">
+                <div class="demo-badge">LIVE DEMO</div>
+                <h2>Demo 3: Product Ready Designs</h2>
+                <p class="demo-subtitle">From mockup to production-ready code</p>
+                <aside class="notes">
+                    <strong>DEMO SCRIPT - Product Ready Designs:</strong><br><br>
+                    1. Open the designs project: <code>cd product-designs && claude</code><br>
+                    2. Drag a design mockup/screenshot into Claude<br>
+                    3. Ask: "Implement this design as a React component"<br>
+                    4. Watch Claude analyze the visual and generate code<br>
+                    5. Show the output - responsive, accessible, production-ready<br>
+                    6. Make a quick iteration: "Make it mobile-first" or "Add hover states"<br><br>
+                    <strong>KEY POINT:</strong> "Claude sees what you see. Drop in a design, get production code."<br><br>
+                    <strong>HIGHLIGHT:</strong> Show the image analysis capability - Claude understands layout, spacing, colors, and interactions from visuals.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- PART 2: MUST KNOW (28 slides) -->
+            <!-- ============================================ -->
+
+            <!-- Section Title: Must Know -->
+            <section >
+                <h1>Part 2</h1>
+                <h2 class="section-title">Must Know</h2>
+                <aside class="notes">
+                    <strong>Starting the essential skills section.</strong><br><br>
+                    - "These are the things you'll use every single day"<br>
+                    - "By the end of this section, you'll be productive with Claude Code"
+                </aside>
+            </section>
+
+            <!-- 2.1 Starting & Basic Interaction -->
+
+            <!-- Slide 9: Getting Started -->
+            <section>
+                <h2>Getting Started</h2>
+                <pre><code class="language-bash" data-trim>
+cd your-project
+claude
+                </code></pre>
+                <p class="fragment simple-text">That's it. You're ready.</p>
+                <aside class="notes">
+                    <strong>The simplest possible start.</strong><br><br>
+                    - "Two commands. That's all you need."<br>
+                    - cd into your project directory<br>
+                    - Type 'claude'<br>
+                    - Claude automatically understands your project structure<br>
+                    - No configuration needed for basic usage<br>
+                    - First time: You'll authenticate via browser
+                </aside>
+            </section>
+
+            <!-- Slide 10: First Things to Try -->
+            <section>
+                <h2>First Things to Try</h2>
+                <div class="prompt-examples">
+                    <div class="prompt-card fragment">
+                        <span class="icon">🔍</span>
+                        <span class="prompt-label">Understand</span>
+                        <code>"What does this project do?"</code>
+                    </div>
+                    <div class="prompt-card fragment">
+                        <span class="icon">🧭</span>
+                        <span class="prompt-label">Navigate</span>
+                        <code>"Where is the auth logic?"</code>
+                    </div>
+                    <div class="prompt-card fragment">
+                        <span class="icon">💡</span>
+                        <span class="prompt-label">Explain</span>
+                        <code>"Explain /src/utils/api.js"</code>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Start with exploration.</strong><br><br>
+                    - "Just talk to it like you would a colleague"<br>
+                    - Ask questions in plain English<br>
+                    - Claude reads the relevant files automatically<br>
+                    - Great for onboarding to new projects<br>
+                    - Great for understanding legacy code
+                </aside>
+            </section>
+
+            <!-- Slide 11: How Context Works -->
+            <section>
+                <h2>How Context Works</h2>
+                <div class="context-diagram">
+                    <div class="context-item fragment">
+                        <span class="icon">📖</span>
+                        <span class="label">On-demand reading</span>
+                        <span class="desc">Claude reads files as needed</span>
+                    </div>
+                    <div class="context-item fragment">
+                        <span class="icon">🧠</span>
+                        <span class="label">No manual setup</span>
+                        <span class="desc">Automatically finds what matters</span>
+                    </div>
+                    <div class="context-item fragment">
+                        <span class="icon">📦</span>
+                        <span class="label">Scales to any size</span>
+                        <span class="desc">Large codebases work fine</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>How Claude understands your code.</strong><br><br>
+                    - "You don't need to tell Claude which files to read"<br>
+                    - It analyzes file names, directory structure, imports<br>
+                    - Reads content when relevant to your question<br>
+                    - Works with monorepos and large codebases<br>
+                    - Only loads what it needs - doesn't eat your memory
+                </aside>
+            </section>
+
+            <!-- 2.2 Making Code Changes -->
+
+            <!-- Slide 12: The Change Flow -->
+            <section>
+                <h2>The Change Flow</h2>
+                <div class="flow-diagram">
+                    <div class="flow-step fragment">You ask for a change</div>
+                    <div class="flow-arrow fragment">↓</div>
+                    <div class="flow-step fragment">Claude proposes edits <span class="subtle">(shows diff)</span></div>
+                    <div class="flow-arrow fragment">↓</div>
+                    <div class="flow-step fragment">You review</div>
+                    <div class="flow-arrow fragment">↓</div>
+                    <div class="flow-step fragment highlight-box">Accept / Reject / Edit</div>
+                </div>
+                <aside class="notes">
+                    <strong>You're always in control.</strong><br><br>
+                    - "Claude never changes your files without asking"<br>
+                    - You see exactly what will change before it happens<br>
+                    - Standard diff format - green for additions, red for removals<br>
+                    - You can accept, reject, or modify the proposed changes<br>
+                    - This is a key safety feature
+                </aside>
+            </section>
+
+            <!-- 2.3 Essential Commands -->
+
+            <!-- Slide 15: Your Daily Toolkit -->
+            <section>
+                <h2>Your Daily Toolkit</h2>
+                <div class="command-grid">
+                    <div class="command-card fragment">
+                        <code>/help</code>
+                        <span>Show all commands</span>
+                    </div>
+                    <div class="command-card fragment">
+                        <code>/model</code>
+                        <span>Switch AI models</span>
+                    </div>
+                    <div class="command-card fragment">
+                        <code>/compact</code>
+                        <span>Save tokens</span>
+                    </div>
+                    <div class="command-card fragment">
+                        <code>/rewind</code>
+                        <span>Undo changes</span>
+                    </div>
+                    <div class="command-card fragment">
+                        <code>/status</code>
+                        <span>Session info</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>These are your core commands.</strong><br><br>
+                    - /help - when you forget something<br>
+                    - /model - switch between Sonnet/Opus/Haiku<br>
+                    - /compact - long session, save tokens<br>
+                    - /rewind - undo changes, try different approach<br>
+                    - /status - check model, token usage<br>
+                    - "Memorize these five. They'll serve you daily."
+                </aside>
+            </section>
+
+            <!-- Slide 16: Checkpoint & Rewind -->
+            <section>
+                <h2>Checkpoint & Rewind</h2>
+                <div class="rewind-info">
+                    <p class="fragment">Claude <strong>auto-saves</strong> your code before each change</p>
+                    <div class="shortcut-box fragment">
+                        <kbd>Esc</kbd> <kbd>Esc</kbd>
+                        <span>Quick rewind</span>
+                    </div>
+                </div>
+                <table class="rewind-table fragment">
+                    <tr>
+                        <td>Code only</td>
+                        <td>Files go back, conversation stays</td>
+                    </tr>
+                    <tr>
+                        <td>Conversation only</td>
+                        <td>Context resets, files stay</td>
+                    </tr>
+                    <tr>
+                        <td>Both</td>
+                        <td>Full rollback</td>
+                    </tr>
+                </table>
+                <aside class="notes">
+                    <strong>Your safety net.</strong><br><br>
+                    - Every change creates a checkpoint<br>
+                    - Double-tap Escape for quick rewind<br>
+                    - Or use /rewind for more control<br>
+                    - Choose what to restore: code, conversation, or both<br>
+                    - "This means you can experiment freely"
+                </aside>
+            </section>
+
+            <!-- Slide 17: Keyboard Shortcuts -->
+            <section>
+                <h2>Keyboard Shortcuts</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item fragment">
+                        <div class="keys"><kbd>Esc</kbd> <kbd>Esc</kbd></div>
+                        <span>Quick rewind</span>
+                    </div>
+                    <div class="shortcut-item fragment">
+                        <div class="keys"><kbd>Shift</kbd>+<kbd>Tab</kbd></div>
+                        <span>Change mode</span>
+                    </div>
+                    <div class="shortcut-item fragment">
+                        <div class="keys"><kbd>Ctrl</kbd>+<kbd>C</kbd></div>
+                        <span>Cancel</span>
+                    </div>
+                    <div class="shortcut-item fragment">
+                        <div class="keys"><kbd>Ctrl</kbd>+<kbd>R</kbd></div>
+                        <span>Search history</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Speed up your workflow.</strong><br><br>
+                    - Esc Esc - quick undo, you'll use this a lot<br>
+                    - Shift+Tab - toggle between modes (covered next)<br>
+                    - Ctrl+C - cancel current operation<br>
+                    - Ctrl+R - search through prompt history<br>
+                    - These become muscle memory quickly
+                </aside>
+            </section>
+
+            <!-- 2.4 Interaction Modes -->
+
+            <!-- Slide 19: Two Modes -->
+            <section>
+                <h2>Two Modes</h2>
+                <div class="mode-comparison">
+                    <div class="mode-card fragment fade-down">
+                        <h3>Default</h3>
+                        <p class="mode-flow">Ask → Review → Approve</p>
+                        <p class="mode-use">Learning, critical code</p>
+                    </div>
+                    <div class="mode-card fragment fade-down highlight-card">
+                        <h3>Auto-accept</h3>
+                        <p class="mode-flow">Ask → Claude does it all</p>
+                        <p class="mode-use">Prototyping, boilerplate</p>
+                        <span class="mode-label">Vibe coder mode</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Choose your level of control.</strong><br><br>
+                    - Default: You review every change - great for learning and critical code<br>
+                    - Auto-accept: Claude works without stopping - great for prototyping<br>
+                    - "Auto-accept is what we call 'vibe coder mode'"<br>
+                    - You can switch anytime with Shift+Tab
+                </aside>
+            </section>
+
+
+            <!-- 2.5 Thinking Modes -->
+
+            <!-- Slide 21: Make Claude Think -->
+            <section>
+                <h2>Make Claude Think</h2>
+                <div class="thinking-levels">
+                    <div class="level fragment" data-level="1">
+                        <span class="level-name">Normal</span>
+                        <span class="level-desc">Quick response</span>
+                    </div>
+                    <div class="level fragment" data-level="2">
+                        <span class="level-name">"think"</span>
+                        <span class="level-desc">Some reasoning</span>
+                    </div>
+                    <div class="level fragment" data-level="3">
+                        <span class="level-name">"think hard"</span>
+                        <span class="level-desc">Deep analysis</span>
+                    </div>
+                    <div class="level fragment" data-level="4">
+                        <span class="level-name">"ultrathink"</span>
+                        <span class="level-desc">Maximum depth</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Different levels of reasoning.</strong><br><br>
+                    - Normal: Direct response, good for simple tasks<br>
+                    - "think": Claude shows some reasoning first<br>
+                    - "think hard": Deeper analysis before responding<br>
+                    - "ultrathink": Maximum depth for the hardest problems<br>
+                    - Trade-off: More thinking = more time + tokens = better results<br>
+                    - "Match thinking level to problem difficulty"
+                </aside>
+            </section>
+
+            <!-- 2.6 Model Selection -->
+
+            <!-- Slide 23: Choose Your Model -->
+            <section>
+                <h2>Choose Your Model</h2>
+                <div class="model-cards">
+                    <div class="model-card fragment">
+                        <h3>Sonnet</h3>
+                        <span class="model-tag default">Default</span>
+                        <ul>
+                            <li>Daily coding</li>
+                            <li>Fast</li>
+                            <li>$3/$15 per M</li>
+                        </ul>
+                    </div>
+                    <div class="model-card fragment">
+                        <h3>Opus</h3>
+                        <span class="model-tag power">Power</span>
+                        <ul>
+                            <li>Hard problems</li>
+                            <li>Slower</li>
+                            <li>$5/$25 per M</li>
+                        </ul>
+                    </div>
+                    <div class="model-card fragment">
+                        <h3>Haiku</h3>
+                        <span class="model-tag quick">Quick</span>
+                        <ul>
+                            <li>Simple tasks</li>
+                            <li>Fastest</li>
+                            <li>$1/$5 per M</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Three models, three use cases.</strong><br><br>
+                    - Sonnet: Your daily driver, great balance of speed and capability<br>
+                    - Opus: When you're stuck, need the best reasoning<br>
+                    - Haiku: Quick questions, simple tasks, cheapest option<br>
+                    - Switch anytime with /model
+                </aside>
+            </section>
+
+            <!-- 2.8 Git Workflows -->
+
+            <!-- 2.9 todo.md -->
+
+            <!-- Slide 29: Planning Big Tasks -->
+            <section>
+                <h2>Planning Big Tasks</h2>
+                <div class="todo-example">
+                    <pre><code class="language-markdown" data-trim>
+# Todo: Add User Authentication
+
+- [x] Create User model
+- [x] Set up password hashing
+- [ ] Build login endpoint
+- [ ] Add JWT tokens
+- [ ] Create auth middleware
+                    </code></pre>
+                </div>
+                <p class="fragment todo-note">Claude creates this automatically for complex tasks</p>
+                <aside class="notes">
+                    <strong>Claude plans before coding.</strong><br><br>
+                    - For complex tasks, Claude creates a todo.md<br>
+                    - Breaks down the work into steps<br>
+                    - Checks off items as it completes them<br>
+                    - You see progress in real-time<br>
+                    - Helps Claude stay on track
+                </aside>
+            </section>
+
+            <!-- 2.10 CLAUDE.md + Imports -->
+
+            <!-- Slide 31: Project Memory -->
+            <section>
+                <h2>Project Memory</h2>
+                <div class="claude-md-intro">
+                    <div class="file-icon">CLAUDE.md</div>
+                    <p class="fragment">Context Claude <strong>always</strong> knows</p>
+                    <p class="fragment subtle">Auto-loaded on every session</p>
+                </div>
+                <aside class="notes">
+                    <strong>Your project's README for Claude.</strong><br><br>
+                    - CLAUDE.md is a special file<br>
+                    - Claude reads it automatically when starting<br>
+                    - Contains project context, conventions, rules<br>
+                    - Like giving Claude institutional knowledge
+                </aside>
+            </section>
+
+            <!-- Slide 32: What to Include -->
+            <section>
+                <h2>What to Include</h2>
+                <div class="claude-md-sections">
+                    <div class="section-item fragment">Tech stack</div>
+                    <div class="section-item fragment">Build commands</div>
+                    <div class="section-item fragment">Code conventions</div>
+                    <div class="section-item fragment">Testing approach</div>
+                    <div class="section-item fragment">Things to avoid</div>
+                </div>
+                <aside class="notes">
+                    <strong>What makes a good CLAUDE.md.</strong><br><br>
+                    - Tech stack: React, Node, database, etc.<br>
+                    - Commands: npm run dev, npm test<br>
+                    - Conventions: naming, patterns, style<br>
+                    - Testing: how to run, coverage requirements<br>
+                    - Warnings: things Claude should avoid<br>
+                    - "Think: what would a new dev need to know?"
+                </aside>
+            </section>
+
+
+            <!-- ============================================ -->
+            <!-- PART 3: INTERMEDIATE (18 slides) -->
+            <!-- ============================================ -->
+
+            <!-- Section Title: Intermediate -->
+            <section >
+                <h1>Part 3</h1>
+                <h2 class="section-title">Intermediate</h2>
+                <aside class="notes">
+                    <strong>Level up section.</strong><br><br>
+                    - "Now that you know the basics, let's go deeper"<br>
+                    - These features will multiply your productivity<br>
+                    - Not required for daily use, but powerful when needed
+                </aside>
+            </section>
+
+            <!-- 3.1 Effective Prompting -->
+
+            <!-- Slide 34: The Common Mistake -->
+            <section>
+                <h2>The Common Mistake</h2>
+                <p class="problem-statement">
+                    Not giving Claude the<br>
+                    <span class="highlight">context</span><br>
+                    to make good decisions
+                </p>
+                <aside class="notes">
+                    <strong>The biggest mistake people make.</strong><br><br>
+                    - It's not being too vague<br>
+                    - It's not providing enough context<br>
+                    - Claude can't read your mind<br>
+                    - Tell it what you want AND why
+                </aside>
+            </section>
+
+            <!-- Slide 35: The Multi-Step Workflow -->
+            <section>
+                <h2>The Multi-Step Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step fragment">1. Research<br><span class="subtle">"Look at how X is done"</span></div>
+                    <div class="workflow-step fragment">2. Plan<br><span class="subtle">"Create a plan - don't code yet"</span></div>
+                    <div class="workflow-step fragment">3. Implement<br><span class="subtle">"Now implement the plan"</span></div>
+                    <div class="workflow-step fragment">4. Verify<br><span class="subtle">"Run tests and fix failures"</span></div>
+                    <div class="workflow-step fragment">5. Commit<br><span class="subtle">"Commit and create a PR"</span></div>
+                </div>
+                <aside class="notes">
+                    <strong>The professional workflow.</strong><br><br>
+                    - Don't let Claude jump straight to coding<br>
+                    - Research: understand existing patterns<br>
+                    - Plan: catch issues early<br>
+                    - Implement: focused execution<br>
+                    - Verify: quality check<br>
+                    - Commit: clean handoff
+                </aside>
+            </section>
+
+            <!-- Slide 36: Good vs Bad Prompts -->
+            <section>
+                <h2>Good vs Bad Prompts</h2>
+                <div class="prompt-comparison">
+                    <div class="bad-prompt fragment">
+                        <span class="label">❌ Vague</span>
+                        <code>"Fix the login bug"</code>
+                    </div>
+                    <div class="good-prompt fragment">
+                        <span class="label">✓ Better</span>
+                        <code>"Fix the null pointer in UserService.getById - add null handling"</code>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Specificity wins.</strong><br><br>
+                    - Vague prompt: Claude has to guess<br>
+                    - Better prompt: Claude knows exactly what to do<br>
+                    - Include: what, where, and constraints<br>
+                    - "Two minutes of clarity saves twenty minutes of back-and-forth"
+                </aside>
+            </section>
+
+            <!-- Slide 37: Prompt Template -->
+            <section>
+                <h2>Prompt Template</h2>
+                <div class="template-box">
+                    <div class="template-part fragment"><span class="label">What</span> What you want done</div>
+                    <div class="template-part fragment"><span class="label">Where</span> Which files/areas</div>
+                    <div class="template-part fragment"><span class="label">Constraints</span> What to preserve/avoid</div>
+                    <div class="template-part fragment"><span class="label">Verify</span> How to know it's done right</div>
+                </div>
+                <aside class="notes">
+                    <strong>The formula for great prompts.</strong><br><br>
+                    - What: the actual task<br>
+                    - Where: scope it to specific files/folders<br>
+                    - Constraints: don't break X, match Y style<br>
+                    - Verify: tests pass, build succeeds, etc.
+                </aside>
+            </section>
+
+            <!-- 3.2 Multi-file Operations -->
+
+            <!-- Slide 38: Codebase-Aware Changes -->
+            <section>
+                <h2>Codebase-Aware Changes</h2>
+                <div class="multifile-examples">
+                    <div class="example-item fragment">
+                        <code>"Rename User to Account across the codebase"</code>
+                    </div>
+                    <div class="example-item fragment">
+                        <code>"Add TypeScript types to all /utils functions"</code>
+                    </div>
+                    <div class="example-item fragment">
+                        <code>"Replace console.log with our logger utility"</code>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Claude understands your whole codebase.</strong><br><br>
+                    - Rename across files: Claude updates all imports<br>
+                    - Bulk updates: Apply changes to many files at once<br>
+                    - Pattern changes: Replace patterns consistently<br>
+                    - Be explicit about scope: "only in /src" or "entire repo"
+                </aside>
+            </section>
+
+            <!-- Slide 39: Key Insight -->
+            <!-- 3.4 Subagents -->
+
+            <!-- Slide 42: Parallel Work -->
+            <section>
+                <h2>Parallel Work</h2>
+                <div class="subagent-diagram">
+                    <div class="main-agent">Main Agent</div>
+                    <div class="agent-arrows">
+                        <span>↓</span>
+                        <span>↓</span>
+                        <span>↓</span>
+                    </div>
+                    <div class="sub-agents">
+                        <div class="sub-agent fragment">PM</div>
+                        <div class="sub-agent fragment">Designer</div>
+                        <div class="sub-agent fragment">Tester</div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Delegate to subagents.</strong><br><br>
+                    - Main Claude can spawn specialized subagents<br>
+                    - Each works independently on their task<br>
+                    - Report back to main agent<br>
+                    - Results get combined<br>
+                    - "Like delegating to junior devs"
+                </aside>
+            </section>
+
+            <!-- Slide 43: Use Cases -->
+            <section>
+                <h2>Subagent Use Cases</h2>
+                <div class="usecase-list">
+                    <div class="usecase-item fragment">
+                        <span class="icon">🎯</span>
+                        <span class="label">Large features</span>
+                        <span class="desc">Split work across subagents</span>
+                    </div>
+                    <div class="usecase-item fragment">
+                        <span class="icon">🔄</span>
+                        <span class="label">Research + implement</span>
+                        <span class="desc">One researches, one implements</span>
+                    </div>
+                    <div class="usecase-item fragment">
+                        <span class="icon">📊</span>
+                        <span class="label">Parallel tasks</span>
+                        <span class="desc">Independent components at once</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>When to use subagents.</strong><br><br>
+                    - Big features: split the work<br>
+                    - Research + implement: parallelize<br>
+                    - Independent components: build simultaneously<br>
+                    - "Build contact form with validation - use a subagent to create the email service"
+                </aside>
+            </section>
+
+            <!-- 3.5 Custom Commands -->
+
+            <!-- Slide 44: Your Own Slash Commands -->
+            <section>
+                <h2>Your Own Commands</h2>
+                <pre><code class="language-markdown" data-trim>
+# .claude/commands/component.md
+
+Create a new React component:
+- Functional component with TypeScript
+- Include unit test file
+- Add to components index
+
+Component name: $ARGUMENTS
+                </code></pre>
+                <aside class="notes">
+                    <strong>Create reusable commands.</strong><br><br>
+                    - Store in .claude/commands/ in your project<br>
+                    - Or ~/.claude/commands/ for global commands<br>
+                    - Use $ARGUMENTS for dynamic input<br>
+                    - Team can share via git
+                </aside>
+            </section>
+
+            <!-- 3.6 @ Mentions -->
+
+            <!-- Slide 46: Quick File References -->
+            <section>
+                <h2>Quick File References</h2>
+                <div class="mention-examples">
+                    <div class="mention fragment"><span class="icon">📄</span><code>@filename</code> <span>Reference a file</span></div>
+                    <div class="mention fragment"><span class="icon">📁</span><code>@folder/</code> <span>Reference a folder</span></div>
+                    <div class="mention fragment"><span class="icon">🔗</span><code>@symbol</code> <span>Reference a function/class</span></div>
+                </div>
+                <p class="fragment mention-note">Type @ and get autocomplete</p>
+                <aside class="notes">
+                    <strong>Faster file references.</strong><br><br>
+                    - Type @ to get autocomplete<br>
+                    - Reference files without typing full paths<br>
+                    - Works with folders and symbols too<br>
+                    - "Explain @src/utils/auth.js"<br>
+                    - "Compare @old-api.js and @new-api.js"
+                </aside>
+            </section>
+
+            <!-- 3.7 Image/Screenshot Support -->
+
+            <!-- Slide 47: Claude Can See -->
+            <section>
+                <h2>Claude Can See</h2>
+                <div class="image-types">
+                    <div class="image-type fragment">Error screenshots</div>
+                    <div class="image-type fragment">UI mockups</div>
+                    <div class="image-type fragment">Architecture diagrams</div>
+                    <div class="image-type fragment">Console output</div>
+                </div>
+                <aside class="notes">
+                    <strong>Visual understanding.</strong><br><br>
+                    - Claude can analyze images<br>
+                    - Screenshot an error: "What's wrong here?"<br>
+                    - Show a mockup: "Implement this design"<br>
+                    - Share a diagram: "Explain this architecture"<br>
+                    - "Let Claude see what you see"
+                </aside>
+            </section>
+
+            <!-- Slide 48: How to Use -->
+            <section>
+                <h2>How to Use Images</h2>
+                <div class="image-methods">
+                    <div class="method fragment">
+                        <span class="icon">🖱️</span>
+                        <span class="method-name">Drag & Drop</span>
+                        <span class="method-desc">Drag image into terminal</span>
+                    </div>
+                    <div class="method fragment">
+                        <span class="icon">📂</span>
+                        <span class="method-name">File Path</span>
+                        <span class="method-desc">"Analyze ./screenshot.png"</span>
+                    </div>
+                    <div class="method fragment">
+                        <span class="icon">📋</span>
+                        <span class="method-name">Clipboard</span>
+                        <span class="method-desc">Paste directly</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Three ways to share images.</strong><br><br>
+                    - Drag and drop is easiest<br>
+                    - File path for specific files<br>
+                    - Clipboard paste if supported<br>
+                    - "Screenshot an error, drop it in, ask what's wrong"
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- PART 4: ADVANCED (3 slides) -->
+            <!-- ============================================ -->
+
+            <!-- Section Title: Advanced -->
+            <section >
+                <h1>Part 4</h1>
+                <h2 class="section-title">Advanced</h2>
+                <p class="section-duration">(awareness only)</p>
+                <aside class="notes">
+                    <strong>Quick tour of advanced features.</strong><br><br>
+                    - "I won't teach these today"<br>
+                    - "Just want you to know they exist"<br>
+                    - "When you need them, you'll know where to look"
+                </aside>
+            </section>
+
+            <!-- Slide 51: What Else Is Possible -->
+            <section>
+                <h2>What Else Is Possible</h2>
+                <div class="advanced-grid">
+                    <div class="advanced-item fragment">
+                        <code>claude -p</code>
+                        <span>Headless mode for scripts</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="icon">🌳</span>
+                        <span>Git worktrees for parallel work</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="icon">⏳</span>
+                        <span>Background tasks</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="icon">📄</span>
+                        <span>Skills for documents</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Advanced capabilities.</strong><br><br>
+                    - Headless: run Claude in CI/CD, scripts<br>
+                    - Worktrees: multiple sessions on different branches<br>
+                    - Background: keep servers running while Claude works<br>
+                    - Skills: create Word docs, PowerPoints, Excel files
+                </aside>
+            </section>
+
+            <!-- Slide 52: Extensibility -->
+            <section>
+                <h2>Extensibility</h2>
+                <div class="advanced-grid">
+                    <div class="advanced-item fragment">
+                        <span class="label">Hooks</span>
+                        <span>Scripts before/after actions</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="label">MCP</span>
+                        <span>Connect to external tools</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="label">Plugins</span>
+                        <span>Extend functionality</span>
+                    </div>
+                    <div class="advanced-item fragment">
+                        <span class="label">Agent SDK</span>
+                        <span>Build your own agents</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Extend Claude Code.</strong><br><br>
+                    - Hooks: run linters, formatters automatically<br>
+                    - MCP: connect to databases, Slack, Google Drive<br>
+                    - Plugins: team-specific tools<br>
+                    - Agent SDK: build custom AI agents
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- PART 5: CLOSING (5 slides) -->
+            <!-- ============================================ -->
+
+            <!-- Slide 54: Quick Reference -->
+            <section>
+                <h2>Quick Reference</h2>
+                <div class="cheat-sheet">
+                    <div class="cheat-column">
+                        <div class="cheat-item"><code>Auto accept</code></div>
+                        <div class="cheat-item"><code>Plan mode</code></div>
+                        <div class="cheat-item"><code>/rewind</code></div>
+                        <div class="cheat-item"><code>Custom Commands</code></div>
+                    </div>
+                    <div class="cheat-column">
+                        <div class="cheat-item"><code>Insert images</code></div>
+                        <div class="cheat-item"><code>@mentions</code></div>
+                        <div class="cheat-item"><code>Think mode</code></div>
+                        <div class="cheat-item"><code>Claude.md</code></div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Key features to remember.</strong><br><br>
+                    - Auto accept: Trust mode for faster workflows<br>
+                    - Plan mode: Step-by-step planning<br>
+                    - /rewind: Undo to any point<br>
+                    - Custom Commands: Create your own<br>
+                    - Insert images: Visual context<br>
+                    - @mentions: Reference files<br>
+                    - Think mode: Deeper reasoning<br>
+                    - Claude.md: Project memory
+                </aside>
+            </section>
+
+            <!-- Slide 55: Next Steps -->
+            <section>
+                <h2>Next Steps</h2>
+                <div class="next-steps">
+                    <div class="step fragment">
+                        <span class="step-num">1</span>
+                        <span class="step-text">Install today</span>
+                    </div>
+                    <div class="step fragment">
+                        <span class="step-num">2</span>
+                        <span class="step-text">Start with exploration</span>
+                    </div>
+                    <div class="step fragment">
+                        <span class="step-num">3</span>
+                        <span class="step-text">Build a CLAUDE.md for your project</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <strong>Your action items.</strong><br><br>
+                    - Install Claude Code today<br>
+                    - Start by exploring a codebase<br>
+                    - Create a CLAUDE.md for your main project<br>
+                    - "You'll be productive within an hour"
+                </aside>
+            </section>
+
+            <!-- Slide 57: Q&A -->
+            <section>
+                <h1>Questions?</h1>
+                <aside class="notes">
+                    <strong>Open the floor.</strong><br><br>
+                    - "What questions do you have?"<br>
+                    - Address common concerns<br>
+                    - If no questions, share tips from your own experience
+                </aside>
+            </section>
+
+            <!-- Slide 58: Thank You -->
+            <section>
+                <h1>Thank You!</h1>
+                <div class="closing-info">
+                    <p>Start using Claude Code today</p>
+                    <p class="subtle">Questions? Reach out anytime</p>
+                </div>
+                <aside class="notes">
+                    <strong>Closing.</strong><br><br>
+                    - Thank everyone for their time<br>
+                    - Encourage them to start today<br>
+                    - Offer to help with setup if needed<br>
+                    - "Happy coding!"
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/zoom/zoom.js"></script>
+    <script>
+        Reveal.initialize({
+            width: 1200,
+            hash: true,
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
+            progress: true,
+            center: true,
+            transition: 'slide',
+            plugins: [RevealNotes, RevealHighlight, RevealZoom]
+        });
+    </script>
+</body>
+</html>
